@@ -1,0 +1,153 @@
+/*Rest page*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #0000;
+    background-image: 
+    url(pexels-daniel-putzer-633409.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+a:hover{
+
+    color: orange;
+    transition: .1s;
+}
+
+
+
+
+/*Header-Navbar*/
+header{
+
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar{
+
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo a{
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+.navbar .links{
+
+    display: flex;
+    gap: 2rem;
+    
+}
+.navbar .toggle-btn{
+
+    font-size: 1.5rem;
+    color: #fff;
+    display: none; 
+    cursor: pointer;
+}
+
+.action-btn{
+    background-color: orangered;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-size: .8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: scale 0.2s ease;
+    cursor: pointer;
+}
+.action-btn:hover{
+
+    scale: 1.05;
+    color: white;
+}
+.action-btn:active{
+
+    scale: .95;
+}
+
+/*Dropdown*/
+.dropdown-menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 280px;
+    height: 0;
+    background-color: rgba(225, 225, 225, 0.1);
+    backdrop-filter: blur(18px);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu.open{
+    height: 240px;
+}
+.dropdown-menu li{
+
+    padding: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dropdown-menu .action-btn{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+/*Media Quries*/
+
+@media (max-width: 992px){
+
+    .navbar .links,
+    .navbar .action-btn{
+        display: none;
+    }
+    .navbar .toggle-btn{
+
+        display: block;
+    }
+
+    .dropdown-menu{
+
+        display: block;
+    }
+    
+}
+
+/*small screen media quries*/
+
+@media (max-width: 576px){
+
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    }
+}
